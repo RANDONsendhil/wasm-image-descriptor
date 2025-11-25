@@ -4,13 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <!-- Load transformers from CDN to avoid Vite bundling issues -->
-  <script type="module">
-    import { env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.0';
-    // Make env available globally if needed
-    window.TransformersEnv = env;
-  </script>
+  <title>Image Describer - AI Powered</title>
+  <!-- Transformers library loaded via ES6 imports in modules -->
+  <!-- Browser cache makes subsequent loads fast -->
 </head>
 
 
@@ -44,12 +40,31 @@
 
 
   </table>
+  <img src="images/sample.jpg" alt="Sample Image">
   <image-describer src="images/sample.jpg"></image-describer>
+
+  <img src="images/ft.jpg" alt="FT Image">
+  <image-describer src="images/ft.jpg"></image-describer>
+
+  <img src="images/balls.jpg" alt="Balls Image">
   <image-describer src="images/balls.jpg"></image-describer>
+
+  <img src="images/dog.jpg" alt="Dog Image">
   <image-describer src="images/dog.jpg"></image-describer>
+
+  <img src="images/flowers.jpg" alt="Flowers Image">
   <image-describer src="images/flowers.jpg"></image-describer>
 
+  <img src="images/ft.jpg" alt="FT Image">
+  <image-describer src="images/ft.jpg"></image-describer>
+
+  <img src="images/ft_1.jpg" alt="FT 1 Image">
+  <image-describer src="images/ft_1.jpg"></image-describer>
+
   <script type="module" src="/src/index.ts"></script>
+  <!-- Preload the AI model BEFORE loading components -->
+  <script type="module" src="/src/preloadModel.ts"></script>
+  <!-- Load the component after model starts loading -->
   <script type="module" src="/src/wasm-component.ts"></script>
 
 </body>

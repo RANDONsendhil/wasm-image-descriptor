@@ -38,3 +38,7 @@ yarn-error.log*
 
 # TypeScript
 *.tsbuildinfo
+
+# Downloaded libraries (can be re-downloaded)
+public/lib/transformers*.js
+public/lib/transformers*.map
