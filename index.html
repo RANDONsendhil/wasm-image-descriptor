@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Load transformers from CDN to avoid Vite bundling issues -->
+  <script type="module">
+    import { env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.6.0';
+    // Make env available globally if needed
+    window.TransformersEnv = env;
+  </script>
+</head>
+
+
+<body>
+  <link rel="stylesheet" href="style.css">
+  <div id="testId"></div>
+  <!-- <h5>Hello World</h5> -->
+  <!-- <input-WebCo class="webco"> </input-WebCo>-->
+  <div class="container">
+    <div class="box" id="box1">Box 1</div>
+    <div class="box" id="box2">Box 2</div>
+    <div class="box" id="box3">Box 3</div>
+  </div>
+  <div class="container_2">
+    <div class="box_2">Box 1</div>
+  </div>
+
+
+  <table border="1" w>
+
+    <tr> table
+      <td style=" background-color: blue; width: 100px; height:30px;"></td>
+    </tr>
+    <tr> table
+      <td style=" background-color: blue; width: 100px; height:30px;"></td>
+    </tr>
+
+    <tr> table
+      <td style=" background-color: blue; width: 100px; height:30px;"></td>
+    </tr>
+
+
+  </table>
+  <image-describer src="images/sample.jpg"></image-describer>
+  <image-describer src="images/balls.jpg"></image-describer>
+  <image-describer src="images/dog.jpg"></image-describer>
+  <image-describer src="images/flowers.jpg"></image-describer>
+
+  <script type="module" src="/src/index.ts"></script>
+  <script type="module" src="/src/wasm-component.ts"></script>
+
+</body>
+
+</html>
